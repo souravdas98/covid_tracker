@@ -21,6 +21,12 @@ const casesTypeColors = {
     half_op: "rgba(251, 68, 67, 0.5)",
     multiplier: 2000,
   },
+  vaccine:{
+    hex: "#7dd71d",
+    rgb: "rgb(125, 215, 29)",
+    half_op: "rgba(125, 215, 29, 0.5)",
+    multiplier: 3000,
+  },
 };
 
 export const sortData = (data) => {
@@ -64,6 +70,9 @@ export const showDataOnMap = (data, casesType = "cases") =>
           </div>
           <div className="info-deaths">
             Deaths: {numeral(country.deaths).format("0,0")}
+          </div>
+          <div className="info-vaccine">
+            vaccine: {numeral(country.vaccine).format("0,0")}
           </div>
         </div>
       </Popup>

@@ -113,6 +113,14 @@ const App = () => {
             cases={prettyPrintStat(countryInfo.todayDeaths)}
             total={numeral(countryInfo.deaths).format("0.0a")}
           />
+          <InfoBox
+            onClick={(e) => setCasesType("Vaccination")}
+            title="Vaccination"
+            isRed
+            active={casesType === "Vaccination"}
+            cases={prettyPrintStat(countryInfo.todayVaccination)}
+            total={numeral(countryInfo.Vaccination).format("0.0a")}
+          />
         </div>
         <Map
           countries={mapCountries}
